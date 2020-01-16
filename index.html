@@ -363,26 +363,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="核对矩阵的维数"><a href="#核对矩阵的维数" class="headerlink" title="核对矩阵的维数"></a>核对矩阵的维数</h1><p>(m是样本数)  </p>
+        <h1 id="核对矩阵的维数"><a href="#核对矩阵的维数" class="headerlink" title="核对矩阵的维数"></a>核对矩阵的维数</h1><p>(m是样本数)  </p>
 <p>w[l]/dw[l] :           (n[l], n[l-1])  </p>
 <p>Z[l]/dZ[l]/A[l]/dA[l] :(n[l],m)  </p>
 <p>b[l]/db[l]:(n[l],1)(根据python的broadcasting变为(n[l],m))</p>
-<h1 id="forward-and-backward-functions"><a href="#forward-and-backward-functions" class="headerlink" title="forward and backward functions"></a>forward and backward functions</h1><p><img src="https://upload-images.jianshu.io/upload_images/13964980-4c334062f5aec236.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>在正向传播过程中，输出a[l]，缓存z[l],w[[l],b[l]</p>
-<h2 id="l层的正向传播"><a href="#l层的正向传播" class="headerlink" title="l层的正向传播"></a>l层的正向传播</h2><ul>
-<li>input: a[l-1]</li>
-<li>output: a[l],cache:z[l]</li>
-</ul>
-<h2 id="l层的反向传播"><a href="#l层的反向传播" class="headerlink" title="l层的反向传播"></a>l层的反向传播</h2><ul>
-<li>input: da[l]</li>
-<li>output: da[l-1],dW[l],db[l]</li>
-</ul>
-<h1 id="参数与超参数"><a href="#参数与超参数" class="headerlink" title="参数与超参数"></a>参数与超参数</h1><ul>
-<li>参数<br>W[1],b[1],W[2],b[2],W[3],b[3]……</li>
-<li>超参数(<strong>hyperparameters</strong>)<br>learning rate:α<br>#iterations<br>hidden layers:L<br>hidden units:n[1],n[2],…  </li>
-<li>超参数决定了参数</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2020/01/16/%E6%B7%B1%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/#more">more >></a>
+        
       
 
       
