@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>classification | un poco的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="maximum likelihood 1P(C1|x） &#x3D;  P(x|C1)P(C1)&#x2F;(P(x|C1)P(C1)+P(x|C2)P(C2)) if there are 7 features:μ1,μ2: 7-dim vector∑1，∑2： 7*7 matrices modifying modelusing the same ∑too many parameters cau">
+  <meta name="description" content="maximum likelihood">
 <meta property="og:type" content="article">
 <meta property="og:title" content="classification">
 <meta property="og:url" content="http://yoursite.com/2020/01/16/classification/index.html">
 <meta property="og:site_name" content="un poco的博客">
-<meta property="og:description" content="maximum likelihood 1P(C1|x） &#x3D;  P(x|C1)P(C1)&#x2F;(P(x|C1)P(C1)+P(x|C2)P(C2)) if there are 7 features:μ1,μ2: 7-dim vector∑1，∑2： 7*7 matrices modifying modelusing the same ∑too many parameters cau">
+<meta property="og:description" content="maximum likelihood">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13964980-0f5de1525198ba13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13964980-a2fd7f23e8699529.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13964980-b8a0cf426f1e690c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13964980-5734f2842655ba2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13964980-ee4b472708ede19d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="article:published_time" content="2020-01-16T11:28:29.000Z">
-<meta property="article:modified_time" content="2020-01-16T13:27:20.764Z">
+<meta property="article:modified_time" content="2020-01-16T14:33:43.460Z">
 <meta property="article:author" content="chenyingli">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/13964980-0f5de1525198ba13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -160,8 +160,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="maximum-likelihood"><a href="#maximum-likelihood" class="headerlink" title="maximum likelihood"></a>maximum likelihood</h2><p><img src="https://upload-images.jianshu.io/upload_images/13964980-0f5de1525198ba13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/13964980-a2fd7f23e8699529.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+        <h2 id="maximum-likelihood"><a href="#maximum-likelihood" class="headerlink" title="maximum likelihood"></a>maximum likelihood</h2><p><img src="https://upload-images.jianshu.io/upload_images/13964980-0f5de1525198ba13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<a id="more"></a>
+<p><img src="https://upload-images.jianshu.io/upload_images/13964980-a2fd7f23e8699529.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P(C1|x） &#x3D;  P(x|C1)P(C1)&#x2F;(P(x|C1)P(C1)+P(x|C2)P(C2))</span><br></pre></td></tr></table></figure>
 <p>if there are 7 features:<br>μ1,μ2: 7-dim vector<br>∑1，∑2： 7*7 matrices</p>
 <h2 id="modifying-model"><a href="#modifying-model" class="headerlink" title="modifying model"></a>modifying model</h2><p><strong>using the same ∑</strong><br>too many parameters cause overfitting<br> <img src="https://upload-images.jianshu.io/upload_images/13964980-b8a0cf426f1e690c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">  </p>

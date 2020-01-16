@@ -218,13 +218,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="多元梯度下降法"><a href="#多元梯度下降法" class="headerlink" title="多元梯度下降法"></a>多元梯度下降法</h1><h2 id="多功能"><a href="#多功能" class="headerlink" title="多功能"></a>多功能</h2><p>利用theta作为向量组，包括了theta0,theta1,…,thetan这n+1个标量</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/13964980-dc0367a581ac31fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/13964980-e41e9fa38186c435.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h2 id="特征缩放"><a href="#特征缩放" class="headerlink" title="特征缩放"></a>特征缩放</h2><p>当两个向量的取值范围相差很大时，形成的椭圆非常瘦，也就是说在梯度下降的时候，会进展的非常slow，轨迹有许多波折。<br><img src="https://upload-images.jianshu.io/upload_images/13964980-9f0f22c32ff37265.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>把特征值控制在-1到1附近。稍微大或小也是可以接受的，比如[-3,3]。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x1 &#x3D; x1×u &#x2F; s1</span><br></pre></td></tr></table></figure>
-<p>u1:average value of x1<br>s1:the range of x, equals to max - min</p>
-
+        <h1 id="多元梯度下降法"><a href="#多元梯度下降法" class="headerlink" title="多元梯度下降法"></a>多元梯度下降法</h1><h2 id="多功能"><a href="#多功能" class="headerlink" title="多功能"></a>多功能</h2><p>利用theta作为向量组，包括了theta0,theta1,…,thetan这n+1个标量</p>
+        
+          <a class="article-more-a" href="/2020/01/16/%E5%A4%9A%E5%85%83%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/#more">more >></a>
+        
       
 
       
@@ -286,22 +283,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="maximum-likelihood"><a href="#maximum-likelihood" class="headerlink" title="maximum likelihood"></a>maximum likelihood</h2><p><img src="https://upload-images.jianshu.io/upload_images/13964980-0f5de1525198ba13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/13964980-a2fd7f23e8699529.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P(C1|x） &#x3D;  P(x|C1)P(C1)&#x2F;(P(x|C1)P(C1)+P(x|C2)P(C2))</span><br></pre></td></tr></table></figure>
-<p>if there are 7 features:<br>μ1,μ2: 7-dim vector<br>∑1，∑2： 7*7 matrices</p>
-<h2 id="modifying-model"><a href="#modifying-model" class="headerlink" title="modifying model"></a>modifying model</h2><p><strong>using the same ∑</strong><br>too many parameters cause overfitting<br> <img src="https://upload-images.jianshu.io/upload_images/13964980-b8a0cf426f1e690c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">  </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/13964980-09eba346d31fcb3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><strong>∑是原来∑1和∑2的加权平均</strong><br>the boundary is linear</p>
-<h2 id="three-steps"><a href="#three-steps" class="headerlink" title="three steps"></a>three steps</h2><ul>
-<li>function set</li>
-<li>goodness of a function</li>
-<li>find the best function</li>
-</ul>
-<h2 id="probability-distribution"><a href="#probability-distribution" class="headerlink" title="probability distribution"></a>probability distribution</h2><p>if you are assuming all the dimensions are independent, then you are using Naive Bayes Classifier(朴素贝叶斯分类器)</p>
-<h2 id="posterior-probability"><a href="#posterior-probability" class="headerlink" title="posterior probability"></a>posterior probability</h2><p><strong>sigmoid function</strong><br><img src="https://upload-images.jianshu.io/upload_images/13964980-5734f2842655ba2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/13964980-ee4b472708ede19d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-
+        <h2 id="maximum-likelihood"><a href="#maximum-likelihood" class="headerlink" title="maximum likelihood"></a>maximum likelihood</h2><p><img src="https://upload-images.jianshu.io/upload_images/13964980-0f5de1525198ba13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+        
+          <a class="article-more-a" href="/2020/01/16/classification/#more">more >></a>
+        
       
 
       
@@ -431,27 +416,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-         <a id="more"></a>
-<p>卷积神经网络（Convolutional Neural Network，CNN）是一种前馈神经网络。<br> 它包括卷积层(convolutional layer)和池化层(pooling layer)。</p>
-<p> <img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggeAJhflAACFamG9M3o011.png" alt="卷积神经网络与全连接神经网络"><br> 左图：全连接神经网络（平面），组成：输入层、激活函数、全连接层<br>右图：卷积神经网络（立体），组成：输入层、<strong>卷积层</strong>、激活函数、<strong>池化层</strong>、全连接层   </p>
-<h1 id="直观理解卷积"><a href="#直观理解卷积" class="headerlink" title="直观理解卷积"></a>直观理解卷积</h1><p><img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggiATHJ7AAEstloH4_M280.png" alt=""><br>第一次卷积可以提取出低层次的特征。</p>
-<p>第二次卷积可以提取出中层次的特征。</p>
-<p>第三次卷积可以提取出高层次的特征。</p>
-<h1 id="卷积计算流程"><a href="#卷积计算流程" class="headerlink" title="卷积计算流程"></a>卷积计算流程</h1><p><img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggiAVJYtAAEv0s5MlhM898.png" alt=""><br>左区域的三个大矩阵是原式图像的输入，RGB三个通道用三个矩阵表示，大小为7<em>7</em>3。</p>
-<p>Filter W0表示1个filter助手，尺寸为3*3，深度为3（三个矩阵）；Filter W1也表示1个filter助手。因为卷积中我们用了2个filter，因此该卷积层结果的输出深度为2（绿色矩阵有2个）。</p>
-<p>Bias b0是Filter W0的偏置项，Bias b1是Filter W1的偏置项。</p>
-<p>OutPut是卷积后的输出，尺寸为3*3，深度为2。</p>
-<h1 id="详细计算过程"><a href="#详细计算过程" class="headerlink" title="详细计算过程"></a>详细计算过程</h1><p>输入是固定的，filter是指定的，因此计算就是如何得到绿色矩阵。第一步，在输入矩阵上有一个和filter相同尺寸的滑窗，然后输入矩阵的在滑窗里的部分与filter矩阵对应位置相乘：<br><img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggiAdu98AAA3JRRQkqA064.png" alt="">   与   <img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggiAHbB9AAA0zhn7kn0788.png" alt=""> 对应位置相乘求和，得0  </p>
-<p><img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggmAHKC1AAA8j3RmKH0221.png" alt="">)与<img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggmADjKaAABBXoHbvrU697.png" alt="">对应位置相乘，得2  </p>
-<p><img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggmAB4JyAAA-tzT0MI0917.png" alt=""> 与 <img src="http://file.elecfans.com/web1/M00/4F/88/pIYBAFreggmAVgckAABFX3cm22o439.png" alt="">对应位置相乘，得0<br>第二步，将3个矩阵产生的结果求和，并加上偏置项，即0+2+0+1=3，因此就得到了输出矩阵的左上角的3<br>第三步，让每一个filter都执行这样的操作，变可得到第一个元素<br>第四步，滑动窗口2个步长，重复之前步骤进行计算</p>
-<h1 id="池化层"><a href="#池化层" class="headerlink" title="池化层"></a>池化层</h1><p><img src="http://file.elecfans.com/web1/M00/4F/89/pIYBAFreggyACO9FAABorvOb-GE402.png" alt="池化层"><br>池化就是对特征图进行特征压缩。池化也叫做下采样。选择原来某个区域的mean或max代替。  </p>
-<p><img src="http://file.elecfans.com/web1/M00/4F/89/pIYBAFreggyACkZ-AABzNVZsMiQ031.png" alt=""></p>
-<blockquote>
-<p>relu函数是人工智能的一种activation function</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f(x) &#x3D; max(0, x)</span><br></pre></td></tr></table></figure>
-<p><img src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=4d2369e667600c33f079d9ce22773632/d788d43f8794a4c25b5e4dd902f41bd5ac6e39c6.jpg" alt="ReLU function"></p>
-
+        <p>卷积神经网络（Convolutional Neural Network，CNN）是一种前馈神经网络。<br> 它包括卷积层(convolutional layer)和池化层(pooling layer)。<br>
+        
+          <a class="article-more-a" href="/2020/01/16/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/#more">more >></a>
+        
       
 
       
@@ -513,107 +481,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<ul>
+        <ul>
 <li>kernal/fiter: 过滤器  </li>
-<li>星号：卷积标志</li>
-</ul>
-<h1 id="垂直边缘检测"><a href="#垂直边缘检测" class="headerlink" title="垂直边缘检测"></a>垂直边缘检测</h1><p><img src="https://upload-images.jianshu.io/upload_images/13964980-150b22d95874beb3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>图中的3*3的filter可以检测垂直边缘 </p>
-<p>sobel filter(改进)</p>
-<table>
-<thead>
-<tr>
-<th>1</th>
-<th>0</th>
-<th>-1</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2</td>
-<td>0</td>
-<td>-2</td>
-</tr>
-<tr>
-<td>2</td>
-<td>0</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>scharr filter</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>3</td>
-<td>0</td>
-<td>-3</td>
-</tr>
-<tr>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>10</td>
-<td>0</td>
-<td>-10</td>
-</tr>
-<tr>
-<td>3</td>
-<td>0</td>
-<td>-3</td>
-</tr>
-<tr>
-<td># 直接卷积的缺点</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>1. 输出缩小</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>2. 丢失边缘信息（边缘像素点输出中采用较少）</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h1><p>为了解决这一缺点，可在边缘填充像素点</p>
-<ul>
-<li>原矩阵：n*n</li>
-<li>过滤器：f*f</li>
-<li>p=padding</li>
-<li>一次卷积后得到的矩阵：(n+2p-f+1)*(n+2p-f+1)</li>
-</ul>
-<h1 id="valid-and-same-convolutions"><a href="#valid-and-same-convolutions" class="headerlink" title="valid and same convolutions"></a>valid and same convolutions</h1><ul>
-<li>valid: <strong>no padding</strong> p  = 0<br>eg.n×n * f×f-&gt;n-f+1 × n-f+1<br>6×6 * 3×3 -&gt; 4×4</li>
-<li>same: pad so that otput size is <strong>the same as</strong> the input size<br>n×n -&gt; n+2p-f+1 × n+2p-f+1<br>make p = (f-1)/2   <blockquote>
-<p>f is usually odd</p>
-</blockquote>
-</li>
-</ul>
-<p>stride S != 1 时<br>n×n -&gt; floor[(n+2p-f)/2] × floor[(n+2p-f)/2]  </p>
-<h1 id="multiple-filters"><a href="#multiple-filters" class="headerlink" title="multiple filters"></a>multiple filters</h1><p><strong>n × n × nc(#channels)  *  f × f × nc  –&gt;  n-f+1 × n-f+1 × nc’(#filters)</strong><br>RGB: 3 channels,then nc = 3  </p>
-<h1 id="types-of-layer-in-a-Conv-Net"><a href="#types-of-layer-in-a-Conv-Net" class="headerlink" title="types of layer in a Conv Net"></a>types of layer in a Conv Net</h1><p>(three common types)</p>
-<ol>
-<li>convolution(卷积层)(CONV)</li>
-<li>pooling(池化层)(POOL)</li>
-<li>fully-connected(全连接层)(FC)  </li>
-</ol>
-<h1 id="pooling"><a href="#pooling" class="headerlink" title="pooling"></a>pooling</h1><h2 id="max-pooling-used-more-often"><a href="#max-pooling-used-more-often" class="headerlink" title="max pooling (used more often)"></a>max pooling (used more often)</h2><p><img src="https://upload-images.jianshu.io/upload_images/13964980-63ebc62cb7e78e25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h2 id="average-pooling"><a href="#average-pooling" class="headerlink" title="average pooling"></a>average pooling</h2><h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><ul>
-<li><p>hyperparameters:<br>f: filter size<br>s: stride<br>max or average pooling</p>
-</li>
-<li><p>input: nH × nW × nC</p>
-</li>
-<li><p>output:[(nH-f)/s + 1] × [(nH-f)/s + 1] × nC </p>
-</li>
-<li><p>NO PARAMETERS TO LEARN</p>
-</li>
-</ul>
-<h1 id="neural-network-example"><a href="#neural-network-example" class="headerlink" title="neural network example"></a>neural network example</h1><p><img src="https://upload-images.jianshu.io/upload_images/13964980-d7505c1a431097e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>layer1 = CONV1 +POOL1</p>
-
+<li>星号：卷积标志
+        
+          <a class="article-more-a" href="/2020/01/16/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/#more">more >></a>
+        
       
 
       
@@ -675,25 +548,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="经典网络"><a href="#经典网络" class="headerlink" title="经典网络"></a>经典网络</h1><h2 id="LeNet-5"><a href="#LeNet-5" class="headerlink" title="LeNet-5"></a>LeNet-5</h2><p>(针对灰度图像，1998)  </p>
+        <h1 id="经典网络"><a href="#经典网络" class="headerlink" title="经典网络"></a>经典网络</h1><h2 id="LeNet-5"><a href="#LeNet-5" class="headerlink" title="LeNet-5"></a>LeNet-5</h2><p>(针对灰度图像，1998)  </p>
 <p><img src="https://upload-images.jianshu.io/upload_images/13964980-e4c8d26b28c15b6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">  </p>
-<h2 id="AlexNet"><a href="#AlexNet" class="headerlink" title="AlexNet"></a>AlexNet</h2><p><img src="https://upload-images.jianshu.io/upload_images/13964980-80fc6123b49ddbd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<ol>
-<li>similar to LeNet, but much bigger</li>
-<li>use ReLU</li>
-</ol>
-<h2 id="VGG-16"><a href="#VGG-16" class="headerlink" title="VGG-16"></a>VGG-16</h2><p><img src="https://upload-images.jianshu.io/upload_images/13964980-d04f22cb8923d01a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">  </p>
-<h1 id="残差网络"><a href="#残差网络" class="headerlink" title="残差网络"></a>残差网络</h1><p>在普通网络（plain network）的基础上增加捷径<br>残差块residual block(to build a ResNet)<br><img src="https://upload-images.jianshu.io/upload_images/13964980-d377b876ddbd5c44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>上图有5个残差块</p>
-<p>残差网络在训练深度网络时非常有效</p>
-<h1 id="inception网络"><a href="#inception网络" class="headerlink" title="inception网络"></a>inception网络</h1><p>利用1×1过滤器解决了computational cost的问题<br>制造瓶颈，减少计算量</p>
-<h1 id="transfer-learning"><a href="#transfer-learning" class="headerlink" title="transfer learning"></a>transfer learning</h1><p>use the pre-trained models to start</p>
-<h1 id="data-augmentation-数据增强"><a href="#data-augmentation-数据增强" class="headerlink" title="data augmentation(数据增强)"></a>data augmentation(数据增强)</h1><ol>
-<li>mirroring(垂直镜像对称)</li>
-<li>random cropping</li>
-<li>color shifting(give R,G,B channels different distortions)</li>
-</ol>
-
+        
+          <a class="article-more-a" href="/2020/01/16/%E6%B7%B1%E5%BA%A6%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C%E5%AE%9E%E4%BE%8B/#more">more >></a>
+        
       
 
       
@@ -755,11 +614,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
-
-<h2 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n &#x3D;&#x3D; hexo new</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy</span><br></pre></td></tr></table></figure>
-<h2 id="组合命令"><a href="#组合命令" class="headerlink" title="组合命令"></a>组合命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
+        <h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/01/16/hexo/#more">more >></a>
+        
       
 
       
