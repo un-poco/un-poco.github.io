@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>C++的文件和流 | un poco的博客</title>
+  <title>C++类&amp;对象 | un poco的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在学习slam以后越来越感觉到没有c++ 寸步难行的感受。于是开启了C++ 的进阶之路。今天就来介绍一下C++文件和流">
+  <meta name="description" content="可以说，C++在C基础上不仅代表着语言的加强，更是plus了面向对象的程序设计。因而，类是C++的核心特性，需要用心理解，un poco也是花了一上午+一下午的时候学习它并整理笔记呢！这篇博客的代码和一些描述主要参考菜鸟教程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++的文件和流">
-<meta property="og:url" content="http://yoursite.com/2020/04/03/C-%E7%9A%84%E6%96%87%E4%BB%B6%E5%92%8C%E6%B5%81/index.html">
+<meta property="og:title" content="C++类&amp;对象">
+<meta property="og:url" content="http://yoursite.com/2020/04/11/C-%E7%B1%BB-%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="un poco的博客">
-<meta property="og:description" content="在学习slam以后越来越感觉到没有c++ 寸步难行的感受。于是开启了C++ 的进阶之路。今天就来介绍一下C++文件和流">
-<meta property="article:published_time" content="2020-04-03T02:41:04.000Z">
-<meta property="article:modified_time" content="2020-04-03T02:47:09.667Z">
+<meta property="og:description" content="可以说，C++在C基础上不仅代表着语言的加强，更是plus了面向对象的程序设计。因而，类是C++的核心特性，需要用心理解，un poco也是花了一上午+一下午的时候学习它并整理笔记呢！这篇博客的代码和一些描述主要参考菜鸟教程。">
+<meta property="article:published_time" content="2020-04-11T10:24:44.000Z">
+<meta property="article:modified_time" content="2020-04-11T10:35:16.616Z">
 <meta property="article:author" content="chenyingli">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -164,89 +164,127 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C-的文件和流" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C-类-对象" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      C++的文件和流
+      C++类&amp;对象
     </h1>
   
 
         
-        <a href="/2020/04/03/C-%E7%9A%84%E6%96%87%E4%BB%B6%E5%92%8C%E6%B5%81/" class="archive-article-date">
-  	<time datetime="2020-04-03T02:41:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
+        <a href="/2020/04/11/C-%E7%B1%BB-%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+  	<time datetime="2020-04-11T10:24:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在学习slam以后越来越感觉到没有c++ 寸步难行的感受。于是开启了C++ 的进阶之路。<br>今天就来介绍一下C++文件和流</p>
+        <p>可以说，C++在C基础上不仅代表着语言的加强，更是plus了面向对象的程序设计。因而，类是C++的核心特性，需要用心理解，un poco也是花了一上午+一下午的时候学习它并整理笔记呢！这篇博客的代码和一些描述主要参考菜鸟教程。</p>
 <a id="more"></a>
-<h1 id="fstream"><a href="#fstream" class="headerlink" title="fstream"></a>fstream</h1><p>定义了三个数据类型</p>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ofstream</td>
-<td>创建文件并写入信息</td>
-</tr>
-<tr>
-<td>ifstream</td>
-<td>从文件读取信息</td>
-</tr>
-<tr>
-<td>fstream</td>
-<td>具有ofstream和ifstream两种功能</td>
-</tr>
-</tbody></table>
-<p>进行文件处理要求的头文件有<iostream>与<fstream></fstream></iostream></p>
-<h1 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void open(const char *filename, ios::openmode mode);</span><br></pre></td></tr></table></figure>
+<h1 id="C-类"><a href="#C-类" class="headerlink" title="C++类"></a>C++类</h1><p>类定义是以关键字 class 开头，后跟类的名称。类的主体是包含在一对花括号中。类定义后必须跟着一个分号或一个声明列表。<br>比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Box</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      double length;   &#x2F;&#x2F; 盒子的长度</span><br><span class="line">      double breadth;  &#x2F;&#x2F; 盒子的宽度</span><br><span class="line">      double height;   &#x2F;&#x2F; 盒子的高度</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="C-对象"><a href="#C-对象" class="headerlink" title="C++对象"></a>C++对象</h1><p>类提供了对象的蓝图，而对象则是依据类创建。<br>比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Box Box1; &#x2F;&#x2F;声明对象Box1，类型是Box</span><br><span class="line">Box Box2; &#x2F;&#x2F;声明对象Box2，类型是Box</span><br></pre></td></tr></table></figure>
+<h1 id="类成员函数"><a href="#类成员函数" class="headerlink" title="类成员函数"></a>类成员函数</h1><p>定义：类的成员函数是指那些把定义和原型写在类定义内部的函数，就像类定义中的其他变量一样。类成员函数是类的一个成员，<strong>它可以操作类的任意对象，可以访问对象中的所有成员</strong>。  </p>
+<p>类成员函数定义方式：</p>
+<ol>
+<li>在类定义中定义,函数声明为内联的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Box</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      double length;      &#x2F;&#x2F; 长度</span><br><span class="line">      double breadth;     &#x2F;&#x2F; 宽度</span><br><span class="line">      double height;      &#x2F;&#x2F; 高度</span><br><span class="line">   </span><br><span class="line">      double getVolume(void)</span><br><span class="line">      &#123;</span><br><span class="line">         return length * breadth * height;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li>在类的外部，使用<strong>范围解析运算符::</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Box</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      double length;         &#x2F;&#x2F; 长度</span><br><span class="line">      double breadth;        &#x2F;&#x2F; 宽度</span><br><span class="line">      double height;         &#x2F;&#x2F; 高度</span><br><span class="line">      double getVolume(void);&#x2F;&#x2F; 返回体积，此处声明但不定义</span><br><span class="line">&#125;;</span><br><span class="line">double Box::getVolume(void)</span><br><span class="line">&#123;</span><br><span class="line">    return length * breadth * height;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+成员函数的调用：<br>使用点运算符(.)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Box myBox;          &#x2F;&#x2F; 创建一个对象</span><br><span class="line"> </span><br><span class="line">myBox.getVolume();  &#x2F;&#x2F; 调用该对象的成员函数</span><br></pre></td></tr></table></figure>
+<h1 id="类访问修饰符"><a href="#类访问修饰符" class="headerlink" title="类访问修饰符"></a>类访问修饰符</h1>类成员的访问限制是通过在类主体内部对各个区域标记 public、private、protected 来指定的。访问修饰符即<strong>public、private、protected</strong>。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Base &#123;</span><br><span class="line"> </span><br><span class="line">   public:</span><br><span class="line"> </span><br><span class="line">  &#x2F;&#x2F; 公有成员</span><br><span class="line"> </span><br><span class="line">   protected:</span><br><span class="line"> </span><br><span class="line">  &#x2F;&#x2F; 受保护成员</span><br><span class="line"> </span><br><span class="line">   private:</span><br><span class="line"> </span><br><span class="line">  &#x2F;&#x2F; 私有成员</span><br><span class="line"> </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ol>
 <ul>
-<li>参数1：文件名称和位置</li>
-<li>参数2:文件被打开的模式</li>
+<li>public成员：在程序中类的外部是可访问的。可以不使用任何成员函数来设置和获取公有变量的值。</li>
+<li>private成员：私有成员变量或函数在类的外部是不可访问的，甚至是不可查看的。只有<strong>类和友元函数</strong>可以访问私有成员。默认情况下，类的所有成员都是私有的。也就是说，如果没有使用任何访问修饰符，类的成员将被假定为私有成员</li>
+<li>protected成员： 与private成员非常相似，但在派生类（子类）中可以访问。  </li>
 </ul>
+<p>实际操作中，我们一般会在私有区域定义数据，在公有区域定义相关的函数，以便在类的外部也可以调用这些函数。  </p>
+<p>继承中的特点：有public,protected, private三种继承方式。</p>
+<ul>
+<li>public继承：基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：public, protected, private</li>
+<li>protected继承：基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：protected, protected, private</li>
+<li>private继承：基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：private, private, private</li>
+</ul>
+<p>注：1.private成员只能被本类成员和友元访问，不能被派生类访问。 2. protected成员可以被派生类访问。</p>
 <table>
 <thead>
 <tr>
-<th>模式标识</th>
-<th>描述</th>
+<th>成员类型</th>
+<th>public成员</th>
+<th>protected成员</th>
+<th>private成员</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>ios::app</td>
-<td>追加到末尾</td>
+<td>public继承</td>
+<td>public</td>
+<td>protected</td>
+<td>private</td>
 </tr>
 <tr>
-<td>ios::ate</td>
-<td>打开时定位到末尾</td>
+<td>protected继承</td>
+<td>protected</td>
+<td>protected</td>
+<td>private</td>
 </tr>
 <tr>
-<td>ios::in</td>
-<td>读取</td>
-</tr>
-<tr>
-<td>ios::out</td>
-<td>写入</td>
-</tr>
-<tr>
-<td>ios::trunc</td>
-<td>截断，文件长度设为0</td>
+<td>private继承</td>
+<td>private</td>
+<td>private</td>
+<td>private</td>
 </tr>
 </tbody></table>
-<p>例如，写入模式打开文件，并截断文件以防已经存在</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ofstream outfile;</span><br><span class="line">outfile.open(&quot;file.dat&quot;, ios::out | ios::trunc );</span><br></pre></td></tr></table></figure>
-<h1 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void close();</span><br></pre></td></tr></table></figure>
-<h1 id="写入文件"><a href="#写入文件" class="headerlink" title="写入文件"></a>写入文件</h1><p>“&lt;&lt;” 对象是ofstream/fstream</p>
-<h1 id="读取文件"><a href="#读取文件" class="headerlink" title="读取文件"></a>读取文件</h1><p>“ &gt;&gt; “ 对象是ifstream/fstream</p>
-<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;fstream&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">   char data[100];</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 以写模式打开文件</span><br><span class="line">   ofstream outfile;</span><br><span class="line">   outfile.open(&quot;afile.dat&quot;);</span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Writing to the file&quot; &lt;&lt; endl;</span><br><span class="line">   cout &lt;&lt; &quot;Enter your name: &quot;; </span><br><span class="line">   cin.getline(data, 100);</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 向文件写入用户输入的数据</span><br><span class="line">   outfile &lt;&lt; data &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Enter your age: &quot;; </span><br><span class="line">   cin &gt;&gt; data;</span><br><span class="line">   cin.ignore();&#x2F;&#x2F;ignore()会忽略掉之前读语句留下的多余字符</span><br><span class="line">   </span><br><span class="line">   &#x2F;&#x2F; 再次向文件写入用户输入的数据</span><br><span class="line">   outfile &lt;&lt; data &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 关闭打开的文件</span><br><span class="line">   outfile.close();</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 以读模式打开文件</span><br><span class="line">   ifstream infile; </span><br><span class="line">   infile.open(&quot;afile.dat&quot;); </span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Reading from the file&quot; &lt;&lt; endl; </span><br><span class="line">   infile &gt;&gt; data; </span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 在屏幕上写入数据</span><br><span class="line">   cout &lt;&lt; data &lt;&lt; endl;</span><br><span class="line">   </span><br><span class="line">   &#x2F;&#x2F; 再次从文件读取数据，并显示它</span><br><span class="line">   infile &gt;&gt; data; </span><br><span class="line">   cout &lt;&lt; data &lt;&lt; endl; </span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 关闭打开的文件</span><br><span class="line">   infile.close();</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="构造函数-amp-析构函数"><a href="#构造函数-amp-析构函数" class="headerlink" title="构造函数&amp;析构函数"></a>构造函数&amp;析构函数</h1><h2 id="类的构造函数"><a href="#类的构造函数" class="headerlink" title="类的构造函数"></a>类的构造函数</h2><p>类的构造函是类的一种特殊成员函数，它会在每次创建类的新对象时执行。<br>构造函数的名称与类的名称是完全相同的，并且不会返回任何类型，也不会返回 void。构造函数可用于为某些成员变量设置初始值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Line</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      void setLength( double len );</span><br><span class="line">      double getLength( void );</span><br><span class="line">      Line();  &#x2F;&#x2F; 这是构造函数</span><br><span class="line"> </span><br><span class="line">   private:</span><br><span class="line">      double length;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 成员函数定义，包括构造函数</span><br><span class="line">Line::Line(void)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;Object is being created&quot; &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="带参数的构造函数"><a href="#带参数的构造函数" class="headerlink" title="带参数的构造函数"></a>带参数的构造函数</h2><p>默认的构造函数没有任何参数，但如果需要，构造函数也可以带有参数。这样在创建对象时就会给对象赋初始值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Line</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      void setLength( double len );</span><br><span class="line">      double getLength( void );</span><br><span class="line">      Line(double len);  &#x2F;&#x2F; 这是构造函数</span><br><span class="line"> </span><br><span class="line">   private:</span><br><span class="line">      double length;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 成员函数定义，包括构造函数</span><br><span class="line">Line::Line( double len)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;Object is being created, length &#x3D; &quot; &lt;&lt; len &lt;&lt; endl;</span><br><span class="line">    length &#x3D; len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用初始化列表来初始化字段"><a href="#使用初始化列表来初始化字段" class="headerlink" title="使用初始化列表来初始化字段"></a>使用初始化列表来初始化字段</h2><p>见代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Line::Line( double len): length(len)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;Object is being created, length &#x3D; &quot; &lt;&lt; len &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>语法效果等效于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Line::Line( double len)</span><br><span class="line">&#123;</span><br><span class="line">    length &#x3D; len;</span><br><span class="line">    cout &lt;&lt; &quot;Object is being created, length &#x3D; &quot; &lt;&lt; len &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>假设要对类C的多个字段初始化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C::C( double a, double b, double c ): X(a), Y(b), Z(c)</span><br><span class="line">&#123;</span><br><span class="line">    ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="类的析构函数"><a href="#类的析构函数" class="headerlink" title="类的析构函数"></a>类的析构函数</h2><p>类的析构函数是类的一种特殊成员函数，它会在每次删除所创建的对象时执行。<br>名称亦与类的名称完全相同，只是有个波浪号做前缀。它不会返回任何值，也不带有任何参数。析构函数有助于在跳出程序（关闭文件、释放内存）前释放资源。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Line</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      void setLength( double len );</span><br><span class="line">      double getLength( void );</span><br><span class="line">      Line();   &#x2F;&#x2F; 这是构造函数声明</span><br><span class="line">      ~Line();  &#x2F;&#x2F; 这是析构函数声明</span><br><span class="line"> </span><br><span class="line">   private:</span><br><span class="line">      double length;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 成员函数定义，包括构造函数</span><br><span class="line">Line::Line(void)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;Object is being created&quot; &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">Line::~Line(void)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;Object is being deleted&quot; &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="C-拷贝构造函数"><a href="#C-拷贝构造函数" class="headerlink" title="C++拷贝构造函数"></a>C++拷贝构造函数</h1><p>拷贝构造函数是一种特殊的构造函数，它在创建对象时，是使用同一类之前创建的对象来初始化新创建的对象。<br>用途：</p>
+<ul>
+<li>通过使用另一个同类型的对象来初始化新创建的对象。</li>
+<li>复制对象把它作为参数传递给函数。</li>
+<li>复制对象，并从函数返回这个对象。  </li>
+</ul>
+<p>如果在类中没有定义拷贝构造函数，编译器会自行定义一个。如果类带有指针变量，并有动态内存分配，则它必须有一个拷贝构造函数。拷贝构造函数的最常见形式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">classname (const classname &amp;obj) &#123;</span><br><span class="line">   &#x2F;&#x2F; 构造函数的主体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="C-友元函数"><a href="#C-友元函数" class="headerlink" title="C++友元函数"></a>C++友元函数</h1><p>类的友元函数是<strong>定义在类外部</strong>，但有权访问类的所有<strong>私有</strong>（private）成员和<strong>保护</strong>（protected）成员。 <em>注：友元函数不是成员函数</em><br>具体参见实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"> </span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">class Box</span><br><span class="line">&#123;</span><br><span class="line">   double width;</span><br><span class="line">public:</span><br><span class="line">   friend void printWidth( Box box );</span><br><span class="line">   void setWidth( double wid );</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 成员函数定义</span><br><span class="line">void Box::setWidth( double wid )</span><br><span class="line">&#123;</span><br><span class="line">    width &#x3D; wid;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 请注意：printWidth() 不是任何类的成员函数</span><br><span class="line">void printWidth( Box box )</span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;* 因为 printWidth() 是 Box 的友元，它可以直接访问该类的任何成员 *&#x2F;</span><br><span class="line">   cout &lt;&lt; &quot;Width of box : &quot; &lt;&lt; box.width &lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 程序的主函数</span><br><span class="line">int main( )</span><br><span class="line">&#123;</span><br><span class="line">   Box box;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 使用成员函数设置宽度</span><br><span class="line">   box.setWidth(10.0);</span><br><span class="line">   </span><br><span class="line">   &#x2F;&#x2F; 使用友元函数输出宽度</span><br><span class="line">   printWidth( box );</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编译结果：</p>
+<blockquote>
+<p>Width of box : 10</p>
+</blockquote>
+<h1 id="C-内联函数"><a href="#C-内联函数" class="headerlink" title="C++内联函数"></a>C++内联函数</h1><p>C++ 内联函数是通常与类一起使用。如果一个函数是内联的，那么在编译时，编译器会把该函数的代码副本放置在每个调用该函数的地方。<br>对内联函数进行任何修改，都需要重新编译函数的所有客户端，因为编译器需要重新更换一次所有的代码，否则将会继续使用旧的函数。<br>如果想把一个函数定义为内联函数，则需要在函数名前面放置关键字 inline，在调用函数之前需要对函数进行定义。如果已定义的函数多于一行，编译器会忽略 inline 限定符。<br>在类定义中定义的函数都是<strong>内联函数</strong>，即使没有inline。<br>内联函数相当于是牺牲空间换时间。所以内联函数一般是1-5行的小函数。一般不在内联函数中使用循环语句和开关语句（得不偿失）。</p>
+<h1 id="C-中的this指针"><a href="#C-中的this指针" class="headerlink" title="C++中的this指针"></a>C++中的this指针</h1><p>每一个对象都能通过this指针访问自己的地址。<strong>this指针是所有成员函数的隐含参数。</strong> 友元函数没有this指针，因为友元不是类的成员。只有成员函数才有this指针。<br>注：</p>
+<ol>
+<li>this关键字是一个指向对象自己的常量指针，不能给this指针赋值。</li>
+<li>成员函数、静态函数都没有this指针。</li>
+<li>this指针作用域在类成员函数内部。</li>
+<li>this指针不是对象的一部分，this指针所占内存大小不会反应在sizeof操作符上。</li>
+</ol>
+<p>使用：1. 类的非静态成员函数返回类对象本身的时候，直接用<code>return *this</code>; 2. 当参数与成员变量名字相同的时候，写作<code>this-&gt;n = n</code>(而不能写成<code>n = n</code>)</p>
+<h1 id="C-中指向类的指针"><a href="#C-中指向类的指针" class="headerlink" title="C++中指向类的指针"></a>C++中指向类的指针</h1><p>访问指向类的指针的成员，需要使用成员访问运算符 -&gt;，就像访问指向结构的指针一样。</p>
+<h1 id="C-类的静态成员"><a href="#C-类的静态成员" class="headerlink" title="C++类的静态成员"></a>C++类的静态成员</h1><p>我们可以使用 <strong>static</strong> 关键字来把类成员定义为静态的。当我们声明类的成员为静态时，这意味着无论创建多少个类的对象，静态成员都只有一个副本。<br>静态成员在类的所有对象中是共享的。如果不存在其他的初始化语句，在创建第一个对象时，所有的静态数据都会被初始化为零。我们不能把静态成员的初始化放置在类的定义中，但是可以在类的外部通过使用范围解析运算符 <strong>::</strong> 来重新声明静态变量从而对它进行初始化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">class Box</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      static int objectCount;</span><br><span class="line">      &#x2F;&#x2F; 构造函数定义</span><br><span class="line">      Box(double l&#x3D;2.0, double b&#x3D;2.0, double h&#x3D;2.0)</span><br><span class="line">      &#123;</span><br><span class="line">         cout &lt;&lt;&quot;Constructor called.&quot; &lt;&lt; endl;</span><br><span class="line">         length &#x3D; l;</span><br><span class="line">         breadth &#x3D; b;</span><br><span class="line">         height &#x3D; h;</span><br><span class="line">         &#x2F;&#x2F; 每次创建对象时增加 1</span><br><span class="line">         objectCount++;</span><br><span class="line">      &#125;</span><br><span class="line">      double Volume()</span><br><span class="line">      &#123;</span><br><span class="line">         return length * breadth * height;</span><br><span class="line">      &#125;</span><br><span class="line">   private:</span><br><span class="line">      double length;     &#x2F;&#x2F; 长度</span><br><span class="line">      double breadth;    &#x2F;&#x2F; 宽度</span><br><span class="line">      double height;     &#x2F;&#x2F; 高度</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 初始化类 Box 的静态成员</span><br><span class="line">int Box::objectCount &#x3D; 0;</span><br></pre></td></tr></table></figure>
+<h2 id="静态成员函数"><a href="#静态成员函数" class="headerlink" title="静态成员函数"></a>静态成员函数</h2><p>如果把函数成员声明为静态的，就可以把函数与类的任何特定对象独立开来。静态成员函数即使在类对象不存在的情况下也能被调用，静态函数只要使用类名加范围解析运算符 :: 就可以访问。<br>静态成员函数只能访问静态成员数据、其他静态成员函数和类外部的其他函数。<br>并且，他们不能访问this指针。</p>
+<p>静态成员函数与普通成员函数区别：</p>
+<ul>
+<li>静态：没有this指针；只能访问静态成员。</li>
+<li>普通：有this指针；可以访问类中任意成员。</li>
+</ul>
+
       
 
       
@@ -346,7 +384,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/03/C-%E7%9A%84%E6%96%87%E4%BB%B6%E5%92%8C%E6%B5%81/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/11/C-%E7%B1%BB-%E5%AF%B9%E8%B1%A1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -360,18 +398,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/11/C-%E7%B1%BB-%E5%AF%B9%E8%B1%A1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          C++类&amp;对象
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/02/2020-4-2%E9%9A%8F%E7%AC%94/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">2020.4.2随笔</div>
+    <a href="/2020/04/03/C-%E7%9A%84%E6%96%87%E4%BB%B6%E5%92%8C%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++的文件和流</div>
       <i class="icon-circle-right"></i>
     </a>
   
