@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>多元梯度下降法 | un poco的博客</title>
+  <title>2021.1随笔 | un poco的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="多功能利用theta作为向量组，包括了theta0,theta1,…,thetan这n+1个标量">
+  <meta name="description" content="最近有点喜欢思考各种问题。哈哈哈不知道是不是二十岁这个年纪的通病。 思考1：手机现在对手机真的是又爱又恨。如果说现代人类一定离不开什么东西，那一定是手机吧。不妨让我定义一下“玩手机”吧，我认为，如果拿起手机，知道自己什么时候可以把它放下来，那叫做“玩手机”。如果拿起手机，刷个不停，甚至不知道自己为什么要这样做，这叫“手机玩你”。我认为成年人最大的标志就是有自控力。然而多少人在手机的魔力之下退化为“">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多元梯度下降法">
-<meta property="og:url" content="http://yoursite.com/2020/01/16/%E5%A4%9A%E5%85%83%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/index.html">
+<meta property="og:title" content="2021.1随笔">
+<meta property="og:url" content="http://yoursite.com/2021/01/20/2021-1%E9%9A%8F%E7%AC%94/index.html">
 <meta property="og:site_name" content="un poco的博客">
-<meta property="og:description" content="多功能利用theta作为向量组，包括了theta0,theta1,…,thetan这n+1个标量">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13964980-dc0367a581ac31fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13964980-e41e9fa38186c435.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13964980-9f0f22c32ff37265.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="article:published_time" content="2020-01-16T11:28:47.000Z">
-<meta property="article:modified_time" content="2020-03-21T05:05:50.007Z">
+<meta property="og:description" content="最近有点喜欢思考各种问题。哈哈哈不知道是不是二十岁这个年纪的通病。 思考1：手机现在对手机真的是又爱又恨。如果说现代人类一定离不开什么东西，那一定是手机吧。不妨让我定义一下“玩手机”吧，我认为，如果拿起手机，知道自己什么时候可以把它放下来，那叫做“玩手机”。如果拿起手机，刷个不停，甚至不知道自己为什么要这样做，这叫“手机玩你”。我认为成年人最大的标志就是有自控力。然而多少人在手机的魔力之下退化为“">
+<meta property="article:published_time" content="2021-01-20T09:13:03.000Z">
+<meta property="article:modified_time" content="2021-01-20T09:39:49.147Z">
 <meta property="article:author" content="chenyingli">
-<meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/13964980-dc0367a581ac31fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="un poco的博客" type="application/atom+xml">
   
@@ -168,32 +164,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-多元梯度下降法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2021-1随笔" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      多元梯度下降法
+      2021.1随笔
     </h1>
   
 
         
-        <a href="/2020/01/16/%E5%A4%9A%E5%85%83%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-16T11:28:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-16</time>
+        <a href="/2021/01/20/2021-1%E9%9A%8F%E7%AC%94/" class="archive-article-date">
+  	<time datetime="2021-01-20T09:13:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="多功能"><a href="#多功能" class="headerlink" title="多功能"></a>多功能</h2><p>利用theta作为向量组，包括了theta0,theta1,…,thetan这n+1个标量</p>
-<a id="more"></a>
-<p><img src="https://upload-images.jianshu.io/upload_images/13964980-dc0367a581ac31fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><img src="https://upload-images.jianshu.io/upload_images/13964980-e41e9fa38186c435.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<h2 id="特征缩放"><a href="#特征缩放" class="headerlink" title="特征缩放"></a>特征缩放</h2><p>当两个向量的取值范围相差很大时，形成的椭圆非常瘦，也就是说在梯度下降的时候，会进展的非常slow，轨迹有许多波折。<br><img src="https://upload-images.jianshu.io/upload_images/13964980-9f0f22c32ff37265.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>把特征值控制在-1到1附近。稍微大或小也是可以接受的，比如[-3,3]。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x1 &#x3D; x1×u &#x2F; s1</span><br></pre></td></tr></table></figure>
-<p>u1:average value of x1<br>s1:the range of x, equals to max - min</p>
+        <p>最近有点喜欢思考各种问题。哈哈哈不知道是不是二十岁这个年纪的通病。</p>
+<h2 id="思考1：手机"><a href="#思考1：手机" class="headerlink" title="思考1：手机"></a>思考1：手机</h2><p>现在对手机真的是又爱又恨。如果说现代人类一定离不开什么东西，那一定是手机吧。<br>不妨让我定义一下“玩手机”吧，我认为，如果拿起手机，知道自己什么时候可以把它放下来，那叫做“玩手机”。如果拿起手机，刷个不停，甚至不知道自己为什么要这样做，这叫“手机玩你”。<br>我认为成年人最大的标志就是有自控力。然而多少人在手机的魔力之下退化为“巨婴”，沦为“手机的奴隶”，被手机玩，完全丧失了自控力。<br>让我对一个人玩手机的原因，分个类：（分类名字都是我瞎起的哈）</p>
+<ol>
+<li>强迫症型：看到手机屏幕亮了，内心活动：“谁来找我了，该不会是重要消息吧，赶紧看看”。</li>
+<li>无聊型：（我是这一类的典型）学了一会，感觉学习好累呀，要休息一下！休息干嘛呢？玩手机吧。</li>
+<li>缓解尴尬型（群体效应型）：聚会之类的时候，旁边的人都在玩手机，没有人和我聊天，好尴尬啊，那不如我也玩手机吧。</li>
+<li>习惯型：有些人常常在某一个时间段玩手机（有些人常常在某个时间段被手机玩），久而久之形成了习惯，比如有些人早上起床人还是懵的，就企图通过玩手机清醒。有的人晚上睡前就喜欢刷一会微博、b站。甚至有的人蹲坑离不开手机，不刷手机就拉不出**（声明，不是本人哈，有的朋友这样2333）。  </li>
+</ol>
+<p>对于以上<strong>被手机玩</strong>的情况，我觉得有几个可能有效的方法：</p>
+<ol>
+<li>强迫症型：在手机的“设置”里面，关掉消息提醒（我就是这样，我手机从来不会因为通知而亮屏）。如果你觉得这会导致你错过重要消息，那我觉得。。。不太会吧。。毕竟别人真的急的话会打电话的。  </li>
+<li>无聊型：方法一：替代法：找到比手机更有趣的事情，成为你的新宠（虽然比手机还好玩的事情好像真的不多哈），比如你养一堆花，想休息的时候就给花浇水（久而久之花都被你淹死了）；或者马上就情人节了，不如给npy折一罐星星（好老土啊哈哈哈），累了就折几个，在爱（无）情（聊）的驱动下，不仅可以少玩手机，还可以收获一罐可爱的星星哦。方法二：有多远滚多远型：把手机放得远一点，这时候，由于你这个肥宅实在太懒得动弹了，所以无聊的时候就不想跑过去拿手机了，不如做一套眼保健操。</li>
+<li>缓解尴尬型：这个，好像只能拉一个人陪你聊天了，总会有不玩手机的人吧。</li>
+<li>习惯型：戒掉一个不好的习惯，只能培养一个新习惯，也就是没有这个习惯的习惯。从第一天开始，有意识地不去做它，21天，就可以戒掉啦。替代法也是Ok的，比如早上醒不来，闻一闻挂在墙头的香囊（我记得我以前看到过这种香味苏醒法，应该是有科学依据的）。晚上，可以做一下睡前拉伸运动。上wc的时候，emmm，这个我没有实战经验，不如试着用“喜马拉雅”，“范登读书”这样的app吧，这样至少得到视觉解放，不然拉臭臭的时候捧着手机也不卫生鸭，毕竟很多大兄弟吃饭的时候也喜欢刷手机吧没错吧~</li>
+</ol>
 
       
 
@@ -238,7 +243,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -294,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/16/%E5%A4%9A%E5%85%83%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/01/20/2021-1%E9%9A%8F%E7%AC%94/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -308,18 +313,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/16/activation-function/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          activation function
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/16/classification/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">classification</div>
+    <a href="/2020/10/14/%E6%8A%BD%E8%B1%A1%E7%B1%BBvs%E6%8E%A5%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">抽象类vs接口</div>
       <i class="icon-circle-right"></i>
     </a>
   
